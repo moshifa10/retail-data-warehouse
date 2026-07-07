@@ -18,19 +18,19 @@ class Sale(Base):
 
     customer_id = Column(
         String,
-        ForeignKey("customers.customer_id"),
+        ForeignKey("customers.customer_id", ondelete="CASCADE"),
         nullable=False
     )
 
     product_id = Column(
         String, 
-        ForeignKey("products.product_id"),
+        ForeignKey("products.product_id", ondelete="CASCADE"),
         nullable=False
     )
 
     store_id = Column(
         String,
-        ForeignKey("stores.store_id"),
+        ForeignKey("stores.store_id", ondelete="CASCADE"),
         nullable=False
     )
 
