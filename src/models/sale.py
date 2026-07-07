@@ -1,6 +1,7 @@
-from sqlalchemy import Column, String, Integer, Date
+from sqlalchemy import Column, String, Integer, Date, ForeignKey
 from ..load import database_loader as dl
 from datetime import date
+from sqlalchemy.orm import relationship
 
 Base = dl.Base
 
@@ -10,11 +11,35 @@ class Sale(Base):
 
     id = Column(Integer, primary_key=True)
 
-    # Raw Data
+    # Business Key
     transaction_id = Column(String, nullable=False)
-    customer_name = Column(String, nullable=False)
-    product_name = Column(String, nullable=False)
-    store_name = Column(String, nullable=False)
+
+    # Foreign Keys
+
+    customer_id = Column(
+        String,
+        ForeignKey("customers.customer_id"),
+        nullable=False
+    )
+
+    product_id = Column(
+        String, 
+        ForeignKey("products.product_id"),
+        nullable=False
+    )
+
+    store_id = Column(
+        String,
+        ForeignKey("stores.store_id"),
+        nullable=False
+    )
+
+    # Sale Information
     quantity = Column(Integer, nullable=False)
     bought_date = Column(Date, nullable=False)
     
+
+    # Relationship
+    customer = relationship("Customer", back_populates="sales")
+    product = relationship("Sale", back_populates="sales")
+    store = relationship("Store", back_populates="sales")
