@@ -1,0 +1,3 @@
+customer_id,customer_name,email,city,reason
+C009,John,john@gmail.com,,Customer city is invalid
+C010,,sarah@gmail.com,,"Customer name is invalid, Customer city is invalid"

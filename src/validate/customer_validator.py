@@ -20,7 +20,22 @@ def validate_customer(df: pd.DataFrame):
         if all([valid_id, valid_city, valid_customer_name]):
             # Just add to proccessed csv
             valid_customer_csv(row)
-            break
+        else:
+            invalid_id = "Customer id is invalid"
+            name = "Customer name is invalid"
+            city = "Customer city is invalid"
+
+            reasons = [
+                (invalid_id, valid_id),
+                (name, valid_customer_name),
+                (city ,valid_city)
+                ] 
+            
+            message = []
+            for i in range(len(reasons)):
+                if reasons[i][-1] == False:
+                    message.append(reasons[i][0])
+            invalid_customer_csv(row, ", ".join(message))
 
 
 
@@ -36,13 +51,14 @@ def check_city(row : pd.Series) -> bool:
 #     return pd.read_csv(file_path)
 
 
-def valid_customer_csv(data: pd.Series) -> pd.DataFrame:
-    file_path = Path("data/processed/valid_customer.csv")
+def valid_customer_csv(data: pd.Series) -> None:
+    file_path = Path("data/processed/valid_customers.csv")
     file_path.parent.mkdir(parents=True, exist_ok=True)
 
     if file_path.is_file():
         df = pd.read_csv(file_path)
         df.loc[len(df)] = data
+        df.to_csv(file_path, index=False)
     
     else:
         # Create columns for that
@@ -56,8 +72,30 @@ def valid_customer_csv(data: pd.Series) -> pd.DataFrame:
         df = pd.DataFrame(new_row)
         df.to_csv(file_path, index=False)
 
+def invalid_customer_csv(data: pd.Series, reason) -> None:
+    file_path = Path("data/rejected/rejected_customers.csv")
+    file_path.parent.mkdir(parents=True, exist_ok=True)
 
+    data["reason"] = reason
+    # print(data)
+    if file_path.is_file():
 
+        df = pd.read_csv(file_path)
+        df.loc[len(df)] = data
+        df.to_csv(file_path, index=False)
+    
+    else:
+        # Create columns for that
+        new_row = {
+            "customer_id": [data["customer_id"]],
+            "customer_name":[ data["customer_name"]],
+            "email": [data["email"]],
+            "city": [data["city"]],
+            "reason": [reason]
+        }
+
+        df = pd.DataFrame(new_row)
+        df.to_csv(file_path, index=False)
 # VALID Ones
 
 # def valid_customers_csv() -> pd.DataFrame:
