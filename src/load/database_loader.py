@@ -3,7 +3,7 @@ from sqlalchemy.orm import  sessionmaker
 
 from src.database.base import Base
 
-
+# Register Models
 from src.models.product import Product
 from src.models.customer import Customer
 from src.models.store import Store
