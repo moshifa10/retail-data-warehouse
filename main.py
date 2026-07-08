@@ -9,7 +9,7 @@ from src.utils.helpers import (CUSTOMERS,
                                SALES,
                                STORES
                                )
-
+from src.validate.customer_validator import validate_customer
 
 
 def main():
@@ -18,7 +18,11 @@ def main():
     
     # Extract
 
-    print(read_customer_csv(CUSTOMERS))
+    df_customer = read_customer_csv(CUSTOMERS)
+
+    validate_customer(df_customer)
+
+    
 
     
 
