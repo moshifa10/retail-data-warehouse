@@ -11,13 +11,18 @@ from pathlib import Path
 def validate_customer(df: pd.DataFrame):
 
     # Check missing customers ids, customer name, city
-
+    ids = []
     for index, row in df.iterrows():
         valid_id = check_id(row)
         valid_customer_name = check_customer_name(row)
         valid_city = check_city(row)
 
         if all([valid_id, valid_city, valid_customer_name]):
+            if (row["customer_id"]) in ids:
+                # Exists
+                invalid_customer_csv(row, "Customer Exists Already")
+                continue
+            ids.append(row["customer_id"])
             # Just add to proccessed csv
             valid_customer_csv(row)
         else:
