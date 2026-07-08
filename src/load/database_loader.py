@@ -1,10 +1,20 @@
 from sqlalchemy import create_engine
-from sqlalchemy.orm import declarative_base, sessionmaker
+from sqlalchemy.orm import  sessionmaker
 
+from src.database.base import Base
+
+
+from src.models.product import Product
+from src.models.customer import Customer
+from src.models.store import Store
+from src.models.sale import Sale
+
+from src.models.product import Product
 
 engine = create_engine("sqlite:///database/retail_warehouse.db")
-Base = declarative_base()
 
 SessionLocal = sessionmaker(bind=engine)
 
-Base.metadata.create_all(engine)
+
+def create_database():
+    Base.metadata.create_all(engine)

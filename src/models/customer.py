@@ -1,10 +1,7 @@
 from sqlalchemy import Column, Integer, String, Date
-from ..load import database_loader as dl
+from src.database.base import Base
 from datetime import date
 from sqlalchemy.orm import relationship
-
-
-Base = dl.Base
 
 
 class Customer(Base):
