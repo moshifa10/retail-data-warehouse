@@ -1,5 +1,6 @@
 import pandas as pd
 from pathlib import Path
+from groq import g
 
 
 # In each file it should return this:
@@ -23,22 +24,31 @@ def validate_products(df: pd.DataFrame):
         if all([valid_id, valid_product_name, valid_category, valid_price, valid_supplier, valid_price_int]):
             if (row["product_id"]) in ids:
                 # Exists
-                invalid_customer_csv(row, "Produect Exists Already")
+                invalid_customer_csv(row, "Product Exists Already")
                 continue
             ids.append(row["product_id"])
             # Just add to proccessed csv
             valid_products_csv(row)
         else:
+            if not valid_category:
+                # Prompt AI
+                pass
+
+            if not valid_supplier:
+                pass
+
             invalid_id = "Product id is invalid"
             name = "Product name is invalid"
-            supplier = "Supplier Missing"
             price = "Invalid price"
+            product_name = "Missing product name"
 
             reasons = [
                 (invalid_id, valid_id),
                 (name, valid_product_name),
-                (city ,valid_city)
+                (price ,valid_price_int if valid_price_int == False else valid_price)
+                (product_name, valid_product_name)
                 ] 
+            
             
             message = []
             for i in range(len(reasons)):
