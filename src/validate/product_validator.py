@@ -1,6 +1,6 @@
 import pandas as pd
 from pathlib import Path
-from groq import g
+from src.ai.ai_enrichment import (get_product_category, get_product_supplier)
 
 
 # In each file it should return this:
@@ -30,12 +30,22 @@ def validate_products(df: pd.DataFrame):
             # Just add to proccessed csv
             valid_products_csv(row)
         else:
-            if not valid_category:
-                # Prompt AI
-                pass
+            response1, response2 = None, None
 
+            if not valid_category:
+                response1 = get_product_category(row["product_name"])
+                
             if not valid_supplier:
-                pass
+                response2 = get_product_supplier(row["product_name"])
+
+            if response1 is not None:
+                row["category"] = response1
+            if response2 is not None:
+                row["supplier"] = response2
+
+            if (row["product_id"] in ids):
+                invalid_customer_csv(row, "Product Exists Already")
+                continue
 
             invalid_id = "Product id is invalid"
             name = "Product name is invalid"
@@ -45,16 +55,21 @@ def validate_products(df: pd.DataFrame):
             reasons = [
                 (invalid_id, valid_id),
                 (name, valid_product_name),
-                (price ,valid_price_int if valid_price_int == False else valid_price)
+                (price ,valid_price_int if valid_price_int == False else valid_price),
                 (product_name, valid_product_name)
-                ] 
-            
+                ]
             
             message = []
             for i in range(len(reasons)):
                 if reasons[i][-1] == False:
                     message.append(reasons[i][0])
-            invalid_customer_csv(row, ", ".join(message))
+
+            if message:
+                invalid_customer_csv(row, ", ".join(message))
+
+            else:
+                ids.append(row["product_id"])
+                valid_products_csv(row)
 
 
 
@@ -72,6 +87,8 @@ def check_price(row : pd.Series) -> bool:
 
 def check_price_interger(row: pd.Series) -> bool: 
     try:
+        if int(row["price"]) < 1:
+            return False
         x = int(row["price"])
         return True
     except (TypeError, ValueError):

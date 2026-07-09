@@ -1,0 +1,4 @@
+customer_id,customer_name,email,city,reason
+C002,,ayanda@gmail.com,Pretoria,Customer name is invalid
+,Sipho,sipho@gmail.com,Durban,Customer id is invalid
+C006,Zanele,zanele@gmail.com,,Customer city is invalid

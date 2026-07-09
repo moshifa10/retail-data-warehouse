@@ -1,0 +1,17 @@
+product_id,product_name,category,price,supplier
+P001,Coke,Drinks,15,Coca-Cola
+P003,Sprite,Drinks,16,Coca-Cola
+P004,Water,Drinks,10,Aquazania
+P005,Milk,Dairy,18,Clover
+P007,Butter,Dairy,55,LandOLakes
+P008,Eggs,Dairy,35,Golden Eggs
+P009,Bread,Food,20,Sasko
+P011,Beans,Food,18,Koo
+P012,Pasta,Food,30,Fatti's & Moni's
+P013,Sugar,Food,25,Illovo
+P014,Flour,Food,32,White Star
+P015,Chocolate,Food,25,Cadbury
+P016,Chips,Snacks,22,Simba
+P017,Biscuits,Snacks,18,Bakers
+P018,Cookies,Snacks,20,Oreo
+P019,Soap,Household,45,Sunlight

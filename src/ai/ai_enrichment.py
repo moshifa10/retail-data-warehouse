@@ -27,13 +27,17 @@ def get_product_category(product_name: str) -> str:
     return response.choices[0].message.content.strip()
 
 def get_product_supplier(product_name: str) -> str:
-    """Identifies the primary supplier or parent company of a product."""
+    """Identifies the primary supplier or parent company of a product, guessing if generic."""
     
     system_instruction = (
         "You are a strict data classification assistant. "
         "Your task is to identify the primary manufacturer, supplier, or parent company of a given product. "
-        "Return ONLY the company name. Do not write full sentences, explanations, or add punctuation. "
-        "Example: If the product is 'Sprite', return 'Coca-Cola'."
+        "CRITICAL RULES: "
+        "1. If the product is generic (e.g., 'Bread', 'Water', 'Soap'), you MUST pick exactly ONE of the most famous brands or manufacturers for that item. "
+        "2. NEVER say 'Various', NEVER ask for clarification, and NEVER provide explanations. "
+        "3. Return ONLY a single company name. Do not write full sentences or add punctuation. "
+        "Example 1 (Specific): If Product is 'Sprite', return 'Coca-Cola'. "
+        "Example 2 (Generic): If Product is 'Bread', return 'Sasko'."
     )
 
     response = groq_client.chat.completions.create(

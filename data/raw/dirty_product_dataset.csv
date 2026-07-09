@@ -1,0 +1,111 @@
+product_id,product_name,category,price,supplier
+P050,Matches,Household,107,OMO
+P035,Biscuits,Snacks,19,Nestle
+P029,Biscuits,Snacks,23,Cadbury
+P036,Fabric Softener,Household,17,Handy Andy
+P023,Coke,Drinks,102,Aquazania
+P088,Sour Cream,Dairy,93,Golden Eggs
+P067,Pretzels,Snacks,79,Oreo
+P026,Milk,Dairy,30,Parmalat
+P083,Matches,Household,24,Baby Soft
+P091,Iced Tea,Drinks,74,Coca-Cola
+P096,Rice,Food,121,Sasko
+P-100Z,Peanuts,Snacks,95,Oreo
+P027,Detergent,Household,69,
+P014,Cooking Oil,Food,95,Albany
+P103,Skim Milk,Dairy,94,Parmalat
+P019,Popcorn,Snacks,37,Willards
+P012,Sponges,Household,12,Colgate
+P034,Sparkling Water,Drinks,59,
+P056,Chocolate,Snacks,58,Oreo
+P060,Sparkling Water,Drinks,98,Aquazania
+P091,Iced Tea,Drinks,74,Coca-Cola
+P064,Pepper,Food,47,Albany
+P084,Beans,Food,11,Koo
+P010,Gouda,Dairy,72,Lancewood
+P097,Detergent,Household,53,Handy Andy
+P033,Sour Cream,Dairy,130,Danone
+P031,Sugar,Food,114,
+P053,Skim Milk,Dairy,107,Clover
+P087,Bread,Food,-104,Spekko
+P078,Dishwashing Liquid,Household,104,Sunlight
+P090,Energy Drink,Drinks,148,Liqui Fruit
+P021,Eggs,Dairy,97,Danone
+P101,Apple Juice,Drinks,115,Liqui Fruit
+P016,Fabric Softener,Household,Free,Colgate
+P013,Orange Juice,Drinks,89,Liqui Fruit
+P098,Bread,Food,148,Spekko
+P077,Lentils,Food,115,Albany
+INVALID-1,Pepper,Food,59,Tastic
+P052,Matches,Household,140,
+P009,Rice,Food,99,Fatti's & Moni's
+P058,Sugar,Food,94,Albany
+P007,Yogurt,Dairy,91,Danone
+P095,Sugar,Food,72,White Star
+P085,Toilet Paper,Household,87,OMO
+P049,Skim Milk,Dairy,126,Clover
+P028,Detergent,Household,26,Domestos
+P089,Sprite,Misc,124,Lipton
+,Flour,Food,32,Illovo
+P072,Cream Cheese,Dairy,104,Clover
+P094,Iced Tea,Drinks,90,Red Bull
+P047,Ginger Ale,Drinks,38,Aquazania
+P001,Cream Cheese,Dairy,79,Danone
+P054,Toilet Paper,Household,35,Sunlight
+P086,Pretzels,Snacks,59,Simba
+P057,Yogurt,Dairy,-126,Danone
+P059,Soap,Household,35,Handy Andy
+P100,Gum,Snacks,68,Simba
+P024,Cream Cheese,Dairy,93,Clover
+P020,Popcorn,Snacks,57,Cadbury
+P039,Toilet Paper,Household,88,Baby Soft
+P082,Margarine,Dairy,61,Clover
+P004,Gouda,Dairy,104,Lancewood
+P081,Iced Tea,Drinks,76,Coca-Cola
+P040,Coke,Drinks,75,Coca-Cola
+P030,Biscuits,Snacks,70,Oreo
+P017,Water,Drinks,28,Liqui Fruit
+P040,Coke,Drinks,75,Coca-Cola
+P017,Water,Drinks,28,Liqui Fruit
+P080,Sponges,Household,23,Domestos
+P070,Flour,Food,24,Fatti's & Moni's
+P041,Apple Juice,Drinks,148,Lipton
+P037,Pepper,Food,91,Fatti's & Moni's
+P104,Chips,Snacks,45,Nestle
+P066,Coke,Drinks,N/A,Liqui Fruit
+P038,Matches,Household,13,Domestos
+P025,Toothpaste,Household,126,Baby Soft
+P048,Fanta,Drinks,64,Aquazania
+P075,Flour,Food,27,Spekko
+P102,Yogurt,Dairy,83,Parmalat
+P003,Pepper,Food,113,Fatti's & Moni's
+P005,Bread,Food,85,Tastic
+P105,Oats,Food,84,Tastic
+P043,Butter,UnknownXYZ,75,Parmalat
+P042,Lentils,Food,41,Tastic
+P063,Water,Drinks,59,Red Bull
+P073,Fabric Softener,Household,23,Baby Soft
+P065,Eggs,Dairy,132,Golden Eggs
+P076,Popcorn,Snacks,11,Cadbury
+P092,Chocolate,Snacks,37,Simba
+P051,Jelly Tots,Snacks,41,Oreo
+P099,Candles,Household,133,Baby Soft
+P008,Pretzels,Snacks,55,Simba
+P032,Skim Milk,Dairy,105,Golden Eggs
+P062,Milk,Dairy,75,Lancewood
+P045,Beans,Food,-94,White Star
+P046,Maize Meal,Food,106,Albany
+P055,Skim Milk,Dairy,64,Danone
+P004,Gouda,Dairy,104,Lancewood
+P006,Beans,Food,52,Spekko
+P044,Toothpaste,Household,76,Sunlight
+P079,Bread,Food,30,Illovo
+P015,Gum,Snacks,124,Oreo
+P074,Oats,Food,98,Spekko
+P061,Eggs,Dairy,146,Parmalat
+P073,Fabric Softener,Household,23,Baby Soft
+P069,Jelly Tots,Snacks,10,Bakers
+P011,Chocolate,Snacks,110,Willards
+P068,Margarine,Dairy,65,Danone
+P018,Iced Tea,Drinks,27,Aquazania
+P071,Toothpaste,Household,83,OMO

@@ -1,0 +1,5 @@
+product_id,product_name,category,price,supplier,reason
+P002,Fanta,Drinks,-1,Coca-Cola,Invalid price
+,Yogurt,Dairy,22,Clover,Product id is invalid
+P010,Rice,Food,abs,Tastic,Invalid price
+,Detergent,Household,90,OMO,Product id is invalid

@@ -1,21 +1,21 @@
 product_id,product_name,category,price,supplier
 P001,Coke,Drinks,15,Coca-Cola
-P002,Fanta,Drinks,16,Coca-Cola
+P002,Fanta,Drinks,-1,
 P003,Sprite,Drinks,16,Coca-Cola
 P004,Water,Drinks,10,Aquazania
 P005,Milk,Dairy,18,Clover
-P006,Yogurt,Dairy,22,Clover
-P007,Butter,Dairy,55,Clover
+,Yogurt,Dairy,22,Clover
+P007,Butter,Dairy,55,
 P008,Eggs,Dairy,35,Golden Eggs
-P009,Bread,Food,20,Sasko
-P010,Rice,Food,40,Tastic
+P009,Bread,Food,20,
+P010,Rice,Food,abs,Tastic
 P011,Beans,Food,18,Koo
-P012,Pasta,Food,30,Fatti's & Moni's
+P012,Pasta,,30,Fatti's & Moni's
 P013,Sugar,Food,25,Illovo
 P014,Flour,Food,32,White Star
-P015,Chocolate,Snacks,25,Cadbury
+P015,Chocolate,,25,Cadbury
 P016,Chips,Snacks,22,Simba
 P017,Biscuits,Snacks,18,Bakers
 P018,Cookies,Snacks,20,Oreo
 P019,Soap,Household,45,Sunlight
-P020,Detergent,Household,90,OMO
+,Detergent,Household,90,OMO
