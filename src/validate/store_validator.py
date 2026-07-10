@@ -10,13 +10,6 @@
                 (invalid_id, valid_id),
                 (name, valid_product_name),
                 (price ,valid_price_int if valid_price_int == False else valid_price),
-                (product_name, valid_product_name)
-                ]
-            
-            message = []
-            for i in range(len(reasons)):
-                if reasons[i][-1] == False:
-                    message.append(reasons[i][0])
 
             if message:
                 invalid_customer_csv(row, ", ".join(message))
