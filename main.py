@@ -11,27 +11,35 @@ from src.utils.helpers import (CUSTOMERS,
                                )
 from src.validate.customer_validator import validate_customer
 from src.validate.product_validator import validate_products
+from src.validate.store_validator import validate_stores
+
 
 def main():
-    create_database()
-    print("Created The Database + Tables")
+    # create_database()
+    # print("Created The Database + Tables")
     
     # Extract
-    print("===================  Extracting customer csv =================================")
-    df_customer = read_customer_csv(CUSTOMERS)
+    # print("===================  Extracting customer csv =================================")
+    # df_customer = read_customer_csv(CUSTOMERS)
 
-    print("===================  Validating customer csv =================================")
-    validate_customer(df_customer)
+    # print("===================  Validating customer csv =================================")
+    # validate_customer(df_customer)
 
-    print()
+    # print()
+    # print("===================  Extracting product csv =================================")
+    # df_product = read_product_csv(PRODUCTS)
+
+    # print("===================  Validating product csv =================================")
+    # validate_products(df_product)
+
     print("===================  Extracting product csv =================================")
-    df_product = read_product_csv(PRODUCTS)
+    df_stores = read_stores_csv(STORES)
 
-    print("===================  Validating product csv =================================")
-    validate_products(df_product)
+    print("===================  Validating stores csv =================================")
+    validate_stores(df_stores)
     
 
-    
+
 
 if __name__ == "__main__":
     main()
